@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction Form</title>
+    <style>
+        body{
+            background-color: rgb(150, 246, 148);
+        }
+
+        #form_{
+            border: 2px solid black;
+            width: fit-content;
+            padding: 20px;
+            background-color: rgb(210, 241, 134);
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .lb{
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        .h_{
+            font-size: 45px;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .sample{
+            margin-top: 30px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="h_">
+        Diabetes Prediction Form
+    </div>
+    <form action="/predict_diabetes" method="post" id="form_">
+        <label for="Pregnancies">Number of Pregnancies:</label>
+        <input type="text" id="Pregnancies" name="Pregnancies" required class="lb"><br>
+        
+        <label for="Glucose">Glucose Level:</label>
+        <input type="text" id="Glucose" name="Glucose" required class="lb"><br>
+        
+        <label for="BloodPressure">Blood Pressure value:</label>
+        <input type="text" id="BloodPressure" name="BloodPressure" required class="lb"><br>
+        
+        <label for="SkinThickness">Skin Thickness value:</label>
+        <input type="text" id="SkinThickness" name="SkinThickness" required class="lb"><br>
+        
+        <label for="Insulin">Insulin Level:</label>
+        <input type="text" id="Insulin" name="Insulin" required class="lb"><br>
+        
+        <label for="BMI">BMI value:</label>
+        <input type="text" id="BMI" name="BMI" required class="lb"><br>
+        
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function value:</label>
+        <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required class="lb"><br>
+        
+        <label for="Age">Age of the Person:</label>
+        <input type="text" id="Age" name="Age" required><br>
+        <br>
+        <input type="submit" value="Diabetes Test Result">
+    </form>
+
+    <div class="sample">
+        Sample Input 1: (6,148,72,35,0,33.6,0.627,50) <br>
+        Sample input 2: ( 5,121,72,23,112,26.2,0.245,30)
+    </div>
+    
+</body>
+</html>

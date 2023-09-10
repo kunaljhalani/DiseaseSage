@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Disease Prediction System</title>
+    <style>
+        body{
+            background-color: rgb(146, 242, 242);
+        }
+
+        #form_{
+            border: 2px solid black;
+            border-radius: 10px;
+            width: fit-content;
+            padding: 10px;
+            background-color: rgb(171, 171, 225);
+            font-size: 30px;
+        }
+        #btn{
+            border: 2px solid black;
+        }
+
+        .head_{
+            font-size: 55px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        .description{
+            font-family: cursive;
+            font-size: 70px;
+            width: fit-content;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .result{
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 280px;
+            height: 150px;
+            background-color: rgb(171, 171, 225);
+        }
+    </style>
+</head>
+<body>
+    <div class="head_">
+        DiseaseSage
+    </div>
+    
+    <form action="/select_disease" method="post" id="form_">
+        <label for="disease" id="lb">Select Disease:</label>
+        <select id="disease" name="disease">
+            <option value="Heart Disease" class="op">Heart Disease Prediction</option>
+            <option value="Cancer" class="op">Cancer Prediction</option>
+            <option value="Diabetes" class="op">Diabetes Prediction</option>
+        </select>
+        <input type="submit" value="Next" id="btn">
+    </form>
+
+    <div class="description">
+        Health is Wealth ! <br>
+        Get yourself a free diagnosis
+    </div>
+
+   <div class="result">
+    {% if result_type %}
+    <h2>{{ result_type }} Result:</h2>
+    <p>{{ result }}</p>
+{% endif %}
+   </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Prediction Form</title>
+    <style>
+        body{
+            background-color: rgb(205, 148, 246);
+        }
+
+        #form_{
+            border: 2px solid black;
+            width: fit-content;
+            padding: 20px;
+            background-color: rgb(134, 241, 237);
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .lb{
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        .h_{
+            font-size: 45px;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        .sample{
+            margin-top: 30px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="h_">
+        Breast Cancer Prediction Form
+    </div>
+    <form action="/predict_cancer" method="post" id="form_">
+        <label for="clump_thickness">Clump Thickness:</label>
+        <input type="text" id="clump_thickness" name="clump_thickness" required class="lb"><br>
+        
+        <label for="unif_cell_size">Unif Cell Size:</label>
+        <input type="text" id="unif_cell_size" name="unif_cell_size" required class="lb"><br>
+        
+        <label for="unif_cell_shape">Unif Cell Shape:</label>
+        <input type="text" id="unif_cell_shape" name="unif_cell_shape" required class="lb"><br>
+        
+        <label for="marg_adhesion">Marg Adhesion:</label>
+        <input type="text" id="marg_adhesion" name="marg_adhesion" required class="lb"><br>
+        
+        <label for="single_epith_cell_size">Single Epith cell Size:</label>
+        <input type="text" id="single_epith_cell_size" name="single_epith_cell_size" required class="lb"><br>
+        
+        <label for="bare_nuclei">Bare Nuclei:</label>
+        <input type="text" id="bare_nuclei" name="bare_nuclei" required class="lb"><br>
+        
+        <label for="bland_chromation">Bland Chromation:</label>
+        <input type="text" id="bland_chromation" name="bland_chromation" required class="lb"><br>
+        
+        <label for="normal_nucleoli">Normal Nucleoi:</label>
+        <input type="text" id="normal_nucleoli" name="normal_nucleoli" required class="lb"><br>
+        
+        <label for="mitoses">Mitoses:</label>
+        <input type="text" id="mitoses" name="mitoses" required class="lb"><br>
+        <br>
+        <input type="submit" value="Breast Cancer Test Result">
+    </form>
+
+    <div class="sample">
+        Sample Input 1: (5,1,1,1,2,1,3,1,1) <br>
+        Sample input 2: (8,10,10,8,7,10,9,7,1)
+    </div>
+</body>
+</html>

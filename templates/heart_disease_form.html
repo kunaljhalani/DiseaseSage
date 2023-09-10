@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction Form</title>
+    <style>
+        body{
+            background-color: rgb(246, 148, 148);
+        }
+
+        #form_{
+            border: 2px solid black;
+            width: fit-content;
+            padding: 20px;
+            background-color: rgb(244, 143, 236);
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .lb{
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        .h_{
+            font-size: 45px;
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .sample{
+            margin-top: 30px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+   <div class="h_">
+    Heart Disease Prediction Form
+   </div>
+    <form action="/predict_heart_disease" method="post" id="form_">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required class="lb"><br>
+        
+        <label for="sex">Sex:</label>
+        <input type="text" id="sex" name="sex" required class="lb"><br>
+        
+        <label for="cp">Chest Pain types:</label>
+        <input type="text" id="cp" name="cp" required class="lb"><br>
+        
+        <label for="trestbps">Resting Blood Pressure:</label>
+        <input type="text" id="trestbps" name="trestbps" required class="lb"><br>
+        
+        <label for="chol">Serum Cholestoral in mg/dl:</label>
+        <input type="text" id="chol" name="chol" required class="lb"><br>
+        
+        <label for="fbs">Fasting Blood Sugar &gt; 120 mg/dl:</label>
+        <input type="text" id="fbs" name="fbs" required class="lb"><br>
+        
+        <label for="restecg">Resting Electrocardiographic results:</label>
+        <input type="text" id="restecg" name="restecg" required class="lb"><br>
+        
+        <label for="thalach">Maximum Heart Rate achieved:</label>
+        <input type="text" id="thalach" name="thalach" required class="lb"><br>
+        
+        <label for="exang">Exercise Induced Angina:</label>
+        <input type="text" id="exang" name="exang" required class="lb"><br>
+        
+        <label for="oldpeak">ST depression induced by exercise:</label>
+        <input type="text" id="oldpeak" name="oldpeak" required class="lb"><br>
+        
+        <label for="slope">Slope of the peak exercise ST segment:</label>
+        <input type="text" id="slope" name="slope" required class="lb"><br>
+        
+        <label for="ca">Major vessels colored by flourosopy:</label>
+        <input type="text" id="ca" name="ca" required class="lb"><br>
+        
+        <label for="thal">thal: 0 = normal; 1 = fixed defect; 2 = reversable defect:</label>
+        <input type="text" id="thal" name="thal" required class="lb"><br>
+        <br>
+        <input type="submit" value="Heart Disease Test Result">
+    </form>
+
+    <div class="sample">
+        Sample Input 1: (63,1,3,145,233,1,0,150,0,2.3,0,0,1) <br>
+        Sample input 2: (57,1,0,130,131,0,1,115,1,1.2,1,1,3)
+    </div>
+</body>
+</html>
